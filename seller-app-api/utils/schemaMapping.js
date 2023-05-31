@@ -40,7 +40,7 @@ exports.getProducts = async (data) => {
                     }
                 },
                 "category_id": items.productSubcategory1??"NA",
-                "location_id": org.storeDetails?.location._id??"0",
+                "location_id": org.storeDetails?.location?._id || "0",
                 "fulfillment_id": '1',//Delivery
                 "matched": true,
                 "@ondc/org/returnable":  items.isReturnable??false,
